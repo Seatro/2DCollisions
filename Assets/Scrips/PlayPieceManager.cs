@@ -16,8 +16,6 @@ public class PlayPieceManager : MonoBehaviour
     void Update()
     {
         SpawnPlayPiece();
-
-        CollisionManager();
     }
 
     private void SpawnPlayPiece()
@@ -42,13 +40,13 @@ public class PlayPieceManager : MonoBehaviour
         }
     }
 
-    private void CollisionManager()
+    public void ResetGame()
     {
+        Debug.Log("Game being reset");
 
-    }
+        Destroy(currentPlayPiece);
+        pieceInPlay = false;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
+        gameManager.GameReset();
     }
 }
