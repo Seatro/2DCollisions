@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Peg : MonoBehaviour
 {
-    [SerializeField] private int pegScore = 5;
+    public int pegScore = 5;
     
     // Start is called before the first frame update
     void Start()

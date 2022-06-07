@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private int score = 0;
+    [SerializeField] private int currentScore = 0;
     
-    // Start is called before the first frame update
-    void Start()
+    public void AddScore(int points)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        currentScore += points;
+        Debug.Log("Current score is: " + currentScore);
     }
 }
